@@ -1,17 +1,18 @@
 import React, { useState } from "react"
 
 const NewComponent = ({ name, age }) => {
-  const [state, setState] = useState(0)
+  const [count, setCount] = useState(0)
 
   const handleClick = e => {
-    setState(prev=>prev + 1)
+    setCount(prev=>prev + 1)
   }
+  console.log(count)
 
   console.log("rendered")
 
   return (
     <div>
-      <h1>{state}</h1>
+      <h1>{count}</h1>
       <button onClick={handleClick}>count</button>
     </div>
   )
